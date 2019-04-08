@@ -1,0 +1,6 @@
+framework module AsyncRequest {
+  umbrella header "AsyncRequest-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -13,9 +13,11 @@
 		3B0299222255566600AB9A5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B0299212255566600AB9A5F /* Assets.xcassets */; };
 		3B0299252255566600AB9A5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B0299232255566600AB9A5F /* LaunchScreen.storyboard */; };
 		3B02992F225556E600AB9A5F /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B02992E225556E600AB9A5F /* CloudKit.framework */; };
+		A0B26C629B35309F32D05B91 /* Pods_iCloud_key.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B752A988BD24BDD9C2A164E4 /* Pods_iCloud_key.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16352EBFC651A016C210922A /* Pods-iCloud key.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iCloud key.debug.xcconfig"; path = "Target Support Files/Pods-iCloud key/Pods-iCloud key.debug.xcconfig"; sourceTree = "<group>"; };
 		3B0299172255566500AB9A5F /* iCloud key.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iCloud key.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B02991A2255566500AB9A5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B02991C2255566500AB9A5F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,6 +27,8 @@
 		3B0299262255566600AB9A5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B02992C225556E300AB9A5F /* iCloud key.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "iCloud key.entitlements"; sourceTree = "<group>"; };
 		3B02992E225556E600AB9A5F /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		B752A988BD24BDD9C2A164E4 /* Pods_iCloud_key.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iCloud_key.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6BFD8D545A82CD89CE4EDEC /* Pods-iCloud key.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iCloud key.release.xcconfig"; path = "Target Support Files/Pods-iCloud key/Pods-iCloud key.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B02992F225556E600AB9A5F /* CloudKit.framework in Frameworks */,
+				A0B26C629B35309F32D05B91 /* Pods_iCloud_key.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +50,7 @@
 				3B0299192255566500AB9A5F /* iCloud key */,
 				3B0299182255566500AB9A5F /* Products */,
 				3B02992D225556E600AB9A5F /* Frameworks */,
+				BB730DC2708DC698493775A9 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,8 +80,19 @@
 			isa = PBXGroup;
 			children = (
 				3B02992E225556E600AB9A5F /* CloudKit.framework */,
+				B752A988BD24BDD9C2A164E4 /* Pods_iCloud_key.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BB730DC2708DC698493775A9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				16352EBFC651A016C210922A /* Pods-iCloud key.debug.xcconfig */,
+				E6BFD8D545A82CD89CE4EDEC /* Pods-iCloud key.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3B0299292255566600AB9A5F /* Build configuration list for PBXNativeTarget "iCloud key" */;
 			buildPhases = (
+				D17256DB44F6A0A4721235F1 /* [CP] Check Pods Manifest.lock */,
 				3B0299132255566500AB9A5F /* Sources */,
 				3B0299142255566500AB9A5F /* Frameworks */,
 				3B0299152255566500AB9A5F /* Resources */,
+				33DCF6211EDD2DCA2A4A1708 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +170,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		33DCF6211EDD2DCA2A4A1708 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iCloud key/Pods-iCloud key-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AsyncRequest/AsyncRequest.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AsyncRequest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iCloud key/Pods-iCloud key-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D17256DB44F6A0A4721235F1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iCloud key-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3B0299132255566500AB9A5F /* Sources */ = {
@@ -302,6 +370,7 @@
 		};
 		3B02992A2255566600AB9A5F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16352EBFC651A016C210922A /* Pods-iCloud key.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "iCloud key/iCloud key.entitlements";
@@ -322,6 +391,7 @@
 		};
 		3B02992B2255566600AB9A5F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6BFD8D545A82CD89CE4EDEC /* Pods-iCloud key.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "iCloud key/iCloud key.entitlements";

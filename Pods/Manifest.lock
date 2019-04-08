@@ -1,0 +1,28 @@
+PODS:
+  - Alamofire (4.8.1)
+  - AsyncRequest (2.1.4)
+
+DEPENDENCIES:
+  - Alamofire
+  - AsyncRequest (from `https://github.com/GrinScooters/grin_ios_async_request.git`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+
+EXTERNAL SOURCES:
+  AsyncRequest:
+    :git: https://github.com/GrinScooters/grin_ios_async_request.git
+
+CHECKOUT OPTIONS:
+  AsyncRequest:
+    :commit: 49c3a09b1f56a6f803fb2ab17496cdf163fd977c
+    :git: https://github.com/GrinScooters/grin_ios_async_request.git
+
+SPEC CHECKSUMS:
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  AsyncRequest: 7da3fdd194f21a0ece8cd796dcc3f32c653173e6
+
+PODFILE CHECKSUM: c377e475c34fdeec63013ad55334032149c69d3e
+
+COCOAPODS: 1.6.1
