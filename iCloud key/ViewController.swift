@@ -7,52 +7,17 @@
 //
 
 import UIKit
-import CloudKit
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var tokenLabel: UILabel!
     
+    let sessionViewModel = SessionViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        iCloudToken()
+        sessionViewModel.getSession()        
     }
-    
-    func iCloudToken() {
-        iCloudUserID(onSuccess: { token in
-            self.updateTokenLabel(token)
-            }, onError: { error in
-            self.updateTokenLabel("Error...")
-        })
-    }
-    
-    func updateTokenLabel(_ token: String) {
-        DispatchQueue.main.async {
-            print("Token: \(token)")
-            self.tokenLabel.text = token
-        }
-    }
-    
-    enum iCloudError: Error {
-        case genericError
-    }
-    
-    func iCloudUserID(onSuccess: @escaping (String) -> Void, onError: @escaping (Error) -> Void) {
-        let container = CKContainer.default()
-        container.fetchUserRecordID() { (recordID, error) in
-            if let recordID = recordID {
-                onSuccess(recordID.recordName)
-            } else {
-                if let error = error {
-                    onError(error)
-                } else {
-                    // Shouldn't happen
-                    onError(iCloudError.genericError)
-                }
-            }
-        }
-    }
-
 }
 

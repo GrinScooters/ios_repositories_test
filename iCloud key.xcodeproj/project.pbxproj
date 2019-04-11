@@ -13,6 +13,11 @@
 		3B0299222255566600AB9A5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B0299212255566600AB9A5F /* Assets.xcassets */; };
 		3B0299252255566600AB9A5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B0299232255566600AB9A5F /* LaunchScreen.storyboard */; };
 		3B02992F225556E600AB9A5F /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B02992E225556E600AB9A5F /* CloudKit.framework */; };
+		714CAABA225D2B8000B502A1 /* GrowError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714CAAB9225D2B8000B502A1 /* GrowError.swift */; };
+		714CAABC225D2BAE00B502A1 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714CAABB225D2BAE00B502A1 /* Result.swift */; };
+		714CAABE225D2C1E00B502A1 /* Interactors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714CAABD225D2C1E00B502A1 /* Interactors.swift */; };
+		714CAAC0225D2C2900B502A1 /* ViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714CAABF225D2C2900B502A1 /* ViewModels.swift */; };
+		71FC3C94225BE45E004F7F35 /* LocationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FC3C93225BE45E004F7F35 /* LocationRepository.swift */; };
 		A0B26C629B35309F32D05B91 /* Pods_iCloud_key.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B752A988BD24BDD9C2A164E4 /* Pods_iCloud_key.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +32,11 @@
 		3B0299262255566600AB9A5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B02992C225556E300AB9A5F /* iCloud key.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "iCloud key.entitlements"; sourceTree = "<group>"; };
 		3B02992E225556E600AB9A5F /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		714CAAB9225D2B8000B502A1 /* GrowError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowError.swift; sourceTree = "<group>"; };
+		714CAABB225D2BAE00B502A1 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		714CAABD225D2C1E00B502A1 /* Interactors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactors.swift; sourceTree = "<group>"; };
+		714CAABF225D2C2900B502A1 /* ViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModels.swift; sourceTree = "<group>"; };
+		71FC3C93225BE45E004F7F35 /* LocationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRepository.swift; sourceTree = "<group>"; };
 		B752A988BD24BDD9C2A164E4 /* Pods_iCloud_key.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iCloud_key.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6BFD8D545A82CD89CE4EDEC /* Pods-iCloud key.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iCloud key.release.xcconfig"; path = "Target Support Files/Pods-iCloud key/Pods-iCloud key.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,6 +75,7 @@
 		3B0299192255566500AB9A5F /* iCloud key */ = {
 			isa = PBXGroup;
 			children = (
+				71FC3C8E225BE3D2004F7F35 /* Repositories */,
 				3B02992C225556E300AB9A5F /* iCloud key.entitlements */,
 				3B02991A2255566500AB9A5F /* AppDelegate.swift */,
 				3B02991C2255566500AB9A5F /* ViewController.swift */,
@@ -85,13 +96,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		71FC3C8E225BE3D2004F7F35 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				714CAAB9225D2B8000B502A1 /* GrowError.swift */,
+				714CAABB225D2BAE00B502A1 /* Result.swift */,
+				71FC3C93225BE45E004F7F35 /* LocationRepository.swift */,
+				714CAABD225D2C1E00B502A1 /* Interactors.swift */,
+				714CAABF225D2C2900B502A1 /* ViewModels.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
 		BB730DC2708DC698493775A9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				16352EBFC651A016C210922A /* Pods-iCloud key.debug.xcconfig */,
 				E6BFD8D545A82CD89CE4EDEC /* Pods-iCloud key.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -225,7 +247,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				714CAABA225D2B8000B502A1 /* GrowError.swift in Sources */,
+				714CAAC0225D2C2900B502A1 /* ViewModels.swift in Sources */,
+				71FC3C94225BE45E004F7F35 /* LocationRepository.swift in Sources */,
+				714CAABC225D2BAE00B502A1 /* Result.swift in Sources */,
 				3B02991D2255566500AB9A5F /* ViewController.swift in Sources */,
+				714CAABE225D2C1E00B502A1 /* Interactors.swift in Sources */,
 				3B02991B2255566500AB9A5F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
